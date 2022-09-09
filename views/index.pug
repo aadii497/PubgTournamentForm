@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+
+    style                     
+       include ../static/style.css   
+       
+       | <!-- this is the way to import css file in pug file --> <!-- we need to add this pipe operator (|) whenever we need to add coment -->
+       | <!-- ../static is used for grting one directory outside and search file in static folder -->
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href = "/">Home</a></li>
+            <li><a href = "/">About</a></li>
+            <li><a href = "/">Contact us</a></li>
+                    
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <h1>PUBG ROOM!!</h1>
+                
+        <p>
+            | #{content} 
+            | <!-- This is a plain html using pug -->
+        </p>
+
+
+        <form action="/" method = "Post" id = "Contact">
+            <input type="text" name="Name" id="Name" placeholder="Enter your name">
+            <input type="text" name="PlayerID" id="PlayerID" placeholder="Enter your player ID">
+            <input type="text" name="Age" id="Age" placeholder="How old are you">
+            <textarea name="Address" id="Address" cols="22" rows="2" placeholder="Enter your address"></textarea>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
